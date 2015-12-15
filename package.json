@@ -1,0 +1,18 @@
+{
+  "name": "bw_challenge",
+  "version": "1.0.0",
+  "description": "Technical test challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "node *.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "bw_challenge"
+  },
+  "author": "Adam Sanderson",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "tape": "^4.2.2"
+  }
+}
