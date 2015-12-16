@@ -12,4 +12,4 @@ module.exports = function sentimentClass (sentiment) {
 		}		
 	}
 	return '';
-}
+};
