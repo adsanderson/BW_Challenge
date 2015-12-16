@@ -4,6 +4,7 @@ var webpack = require("webpack");
 var WebpackDevServer = require("webpack-dev-server");
 var webpackConfig = require("./webpack.config.js");
 
+ 
 // The development server (the recommended option for development)
 gulp.task("default", ["webpack-dev-server"]);
 

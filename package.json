@@ -12,7 +12,10 @@
   },
   "author": "Adam Sanderson",
   "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
     "gulp": "^3.9.0",
+    "gulp-tape": "0.0.7",
     "tape": "^4.2.2",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
