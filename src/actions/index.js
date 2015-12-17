@@ -1,4 +1,5 @@
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch';
+import mapTopicsJsonToState from './mapTopicsJsonToState';
 
 export const REQUEST_TOPICS = 'REQUEST_TOPICS';
 export const RECEIVE_TOPICS = 'RECEIVE_TOPICS';
@@ -11,26 +12,24 @@ export function selectTopic (index) {
 	};
 }
 
-window.xselectTopic = selectTopic;
+export function requestTopics () {
+	return {
+		type: REQUEST_TOPICS
+	}
+}
 
-// export function requestTopics (topics) {
-// 	return {
-// 		type: REQUEST_TOPICS
-// 	}
-// }
+export function fetchTopics() {
+  return (dispatch) => {
+    dispatch(requestTopics())
+    return fetch('topics.json')
+      .then((response) => response.json())
+      .then((json) => dispatch(receiveTopics(json)))
+  }
+}
 
-// export function fetchTopics(topics) {
-//   return (dispatch) => {
-//     dispatch(requestTopics(topics))
-//     return fetch('topics.json')
-//       .then((response) => response.json())
-//       .then((json) => dispatch(receiveTopics(topics, json)))
-//   }
-// }
-
-// export function receiveTopics (topics, json) {
-// 	return {
-// 		type: RECEIVE_TOPICS,
-// 		topics: json.data.children.map(child => child.data)
-// 	}
-// }
+export function receiveTopics (json) {
+	return {
+		type: RECEIVE_TOPICS,
+		topics: mapTopicsJsonToState(json.topics)
+	}
+}

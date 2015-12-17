@@ -10,13 +10,15 @@ let initialState = {
 };
 
 function topics(state = initialState, action) {
-	console.log('TEST');
-
 	switch (action.type) {    
     case SELECT_TOPIC:
-      return Object.assign({}, state, {
-        selectedTopic: action.index
-      });
+      	return Object.assign({}, state, {
+        	selectedTopic: action.index
+      	});
+    case RECEIVE_TOPICS:
+    	return Object.assign({}, state, {
+        	topics: action.topics
+      	});
     default:
       return state
   }

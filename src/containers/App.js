@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 import TagCloud from '../components/TagCloud'
 import * as topicActions from '../actions';
 
-function mapStateToProps(state) {
-  return {
-    // counter: state.counter
-  }
+function mapStateToProps(state) {	
+  	return {
+    	selectedTopic: state.selectedTopic,
+		topics: state.topics
+  	};
 }
 
 function mapDispatchToProps(dispatch) {

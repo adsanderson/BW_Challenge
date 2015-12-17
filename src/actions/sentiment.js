@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function sentimentClass (sentiment) {
+export default function setSentimentClass (sentiment) {
 	if (typeof sentiment === 'number') {
 		const positiveSentiment = 60;
 		const negativeSentiment = 40;
