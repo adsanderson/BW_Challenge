@@ -1,6 +1,6 @@
 'use strict';
 
-let sentiment = require('./sentiment');
+let sentiment = require('../src/actions/sentiment');
 let test = require('tape');
 
 test('expect an empty string to be returned for neutral values', function (t) {

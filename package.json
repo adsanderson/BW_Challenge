@@ -20,6 +20,11 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
     "gulp-tape": "0.0.7",
+    "json-loader": "^0.5.4",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-tap": "^1.0.3",
+    "karma-webpack": "^1.7.0",
     "tape": "^4.2.2",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"

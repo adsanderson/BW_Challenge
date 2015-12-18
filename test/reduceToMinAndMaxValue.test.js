@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var reduceToMinAndMaxValue = require('./reduceToMinAndMaxValue');
+var reduceToMinAndMaxValue = require('../src/actions/reduceToMinAndMaxValue');
 
 test('expect an empty string to be returned for neutral values', function (t) {
     t.plan(2);
