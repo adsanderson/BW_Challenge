@@ -1,3 +1,13 @@
+body {
+	color: #616161;
+	font-family: 'Oxygen', sans-serif;
+}
+
+.bw-tag {
+	font-size: 1.2em;
+	list-style: none;
+}
+
 .bw-tag-size-0 {
 	font-size: 1em;
 }
@@ -18,11 +28,11 @@
 }
 
 .bw-tag-positive {
-	color: green;
+	color: #61AE24;
 }
 
 .bw-tag-negative {
-	color: red;
+	color: #E54028;
 }
 
 .bw-tag-active {

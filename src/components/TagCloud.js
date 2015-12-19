@@ -32,7 +32,7 @@ var TagCloud = React.createClass({
 
 	    return (
 	    	<div>
-	    		<ul className="commentBox">
+	    		<ul className="bw-tag">
 	        		{topicsNodes}
 	      		</ul>
 	      		{meta}
