@@ -4,9 +4,13 @@ import { Provider } from 'react-redux';
 import App from './containers/App';
 import configureStore from './store/configureStore';
 
-let store = configureStore();
+require("./tag-cloud.css");
 
-window.xStore = store;
+// Polyfillers for earlier versions of ie
+require('es6-promise').polyfill();	
+require('es6-object-assign').polyfill();
+
+let store = configureStore();
 
 let rootElement = document.getElementById('root');
 

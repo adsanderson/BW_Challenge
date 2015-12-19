@@ -1,10 +1,8 @@
 var path = require("path");
 
-module.exports = {
-    target: 'node',
+module.exports = {    
     entry: {
-        bundle: "./src/main.js",
-        test: "./test"
+        bundle: "./src/main.js"
     },
     output: {
         path: path.resolve(__dirname, "build"),
@@ -17,11 +15,9 @@ module.exports = {
                 exclude: /node_modules/, 
                 loader: "babel-loader"
             },
-             { test: /\.json$/, loader: "json" },
-        ]
-        // loaders: [
-        //     { test: /\.css$/, loader: "style!css" }
-        // ]
+            { test: /\.json$/, loader: "json" },
+            { test: /\.css$/, loader: "style-loader!css-loader" }
+        ]        
     },
     plugins: []
 };
