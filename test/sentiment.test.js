@@ -1,7 +1,7 @@
 'use strict';
 
-let sentiment = require('../src/actions/sentiment');
-let test = require('tape');
+import sentiment from '../src/actions/sentiment';
+import test from 'tape';
 
 test('expect an empty string to be returned for neutral values', function (t) {
     t.plan(1);

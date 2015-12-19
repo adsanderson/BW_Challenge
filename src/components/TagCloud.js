@@ -12,9 +12,14 @@ var TagCloud = React.createClass({
   	render() {	  	
 	  	let { topics, selectedTopic } = this.props.topics;	  	
 	  	let topicsNodes = topics.map((topic, index) => {  	
+	  		let activeTopic = '';
+	  		if (index === selectedTopic) {
+	  			activeTopic = ' bw-tag-active';
+	  		}
 	  		let listItemProps = {
 	  			key: topic.id,
-	  			onClick: this.handleListItemClick.bind(this, index)
+	  			onClick: this.handleListItemClick.bind(this, index),
+	  			className: topic.className + activeTopic
 	  		}	
 	  		return <li {...listItemProps}>{topic.label}</li>
 	  	});
@@ -23,12 +28,14 @@ var TagCloud = React.createClass({
 	  		topic: topics[selectedTopic]
 	  	};
 
+	  	let meta = (selectedTopic === -1) ? null : <MetaData {...metaDataProps}/>
+
 	    return (
 	    	<div>
 	    		<ul className="commentBox">
 	        		{topicsNodes}
 	      		</ul>
-	      		<MetaData {...metaDataProps}/>
+	      		{meta}
 	      	</div>
 	    );
   	}

@@ -2,6 +2,7 @@
 
 import reduceToMinAndMaxValue from './reduceToMinAndMaxValue';
 import setSentimentClass from './sentiment';
+import setTopicSizeClass from './topic_size'
 
 export default function mapTopicsJsonToState (topics) {
 	let initialRangeValue = topics[0].volume;
@@ -11,7 +12,13 @@ export default function mapTopicsJsonToState (topics) {
 }
 
 function createMapToState (range) {
-	return function (topic) {		
+	return function (topic) {	
+
+		let topicClass = [
+			setSentimentClass(topic.sentimentScore),
+			setTopicSizeClass(topic.volume, range)
+		].join(' ');
+
 		return {
 			id: topic.id,
 			label: topic.label,
@@ -20,7 +27,7 @@ function createMapToState (range) {
 			sentimentNeutral: topic.sentiment.neutral,
 			sentimentNegative: topic.sentiment.negative,
 			sentimentScore: topic.sentimentScore,
-			sentimentClass: setSentimentClass(topic.sentimentScore)
+			className: topicClass
 		};		
 	}
 }
