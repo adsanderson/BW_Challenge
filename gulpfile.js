@@ -85,3 +85,53 @@ gulp.task("webpack-dev-server", function(callback) {
 	});
 });
 
+
+// Testing
+
+var myTestConfig = Object.create(webpackConfig);
+myTestConfig.devtool = "sourcemap";
+myTestConfig.debug = true;
+myTestConfig.target = "node";
+myTestConfig.entry = {
+	test: "./test"
+};
+
+// create a single instance of the compiler to allow caching
+var testCompiler = webpack(myTestConfig);
+
+gulp.task("webpack:build-test", function(callback) {
+	// run webpack
+	testCompiler.run(function(err, stats) {
+		if(err) throw new gutil.PluginError("webpack:build-test", err);
+		gutil.log("[webpack:build-test]", stats.toString({
+			colors: true
+		}));
+		callback();
+	});
+});
+
+var myTestBrowserConfig = Object.create(webpackConfig);
+myTestBrowserConfig.devtool = "sourcemap";
+myTestBrowserConfig.debug = true;
+myTestBrowserConfig.entry = {
+	testBrowser: "./test"
+};
+
+// create a single instance of the compiler to allow caching
+var testCompiler = webpack(myTestBrowserConfig);
+
+gulp.task("webpack:build-test-browser", function(callback) {
+	// run webpack
+	testCompiler.run(function(err, stats) {
+		if(err) throw new gutil.PluginError("webpack:build-test-browser", err);
+		gutil.log("[webpack:build-test-browser]", stats.toString({
+			colors: true
+		}));
+		callback();
+	});
+});
+
+
+gulp.task("test", ["webpack:build-test"], function () {
+    require('./build/test.js');
+});
