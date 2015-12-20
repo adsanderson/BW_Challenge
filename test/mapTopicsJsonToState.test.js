@@ -322,8 +322,17 @@ test('mapTopicsJsonToState: expect the correct topic object to be produced that 
 
 test('mapTopicsJsonToState: expect the the topics to not be in the same order', function (t) {
 
+  function returnIdString(topicsArray) {
+    return topicsArray.reduce((idString, topic) => {
+      return idString + topic.id;
+    }, '');
+  }
+
   let result = mapTopicsJsonToState(mockTopics.topics);
 
-  t.notEqual(mockTopics.topics[0].id, result[0].id);
+  let initialIdsString = returnIdString(mockTopics.topics);
+  let resultIdString = returnIdString(result);
+
+  t.notEqual(initialIdsString, resultIdString);
   t.end();
 });
