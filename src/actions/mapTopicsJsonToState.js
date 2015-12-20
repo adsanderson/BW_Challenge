@@ -8,7 +8,7 @@ export default function mapTopicsJsonToState (topics) {
 	let initialRangeValue = topics[0].volume;
 	let range = topics.reduce(reduceToMinAndMaxValue, {min:initialRangeValue, max:initialRangeValue});
 	let mapToState = createMapToState(range);
-	return topics.map(mapToState);
+	return shuffleArray(topics.map(mapToState));
 }
 
 function createMapToState (range) {
@@ -27,8 +27,21 @@ function createMapToState (range) {
 			sentimentNeutral: topic.sentiment.neutral,
 			sentimentNegative: topic.sentiment.negative,
 			sentimentScore: topic.sentimentScore,
-			className: topicClass
+			className: topicClass,
+			position: {
+				x: '',
+				y: ''
+			}
 		};		
 	}
 }
 
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
