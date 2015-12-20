@@ -3,9 +3,23 @@ body {
 	font-family: 'Oxygen', sans-serif;
 }
 
-.bw-tag {
-	font-size: 1.2em;
-	list-style: none;
+.bw-container {
+	display: flex;
+	flex: 0 300px;
+}
+
+.bw-tag {	
+	font-size: 1.2em;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+
+.bw-tag-topic {
+	display: inline;
+	padding: 15px;
 }
 
 .bw-tag-size-0 {
@@ -27,14 +41,18 @@ body {
 	font-size: 3em;
 }
 
-.bw-tag-positive {
+.bw-positive {
 	color: #61AE24;
 }
 
-.bw-tag-negative {
+.bw-negative {
 	color: #E54028;
 }
 
 .bw-tag-active {
 	text-decoration: underline;
+}
+
+.bw-meta-container {
+	flex: 0 0 20rem;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import MetaData from './MetaData';
 
@@ -19,9 +20,9 @@ var TagCloud = React.createClass({
 	  		let listItemProps = {
 	  			key: topic.id,
 	  			onClick: this.handleListItemClick.bind(this, index),
-	  			className: topic.className + activeTopic
+	  			className: 'bw-tag-topic ' + topic.className + activeTopic
 	  		}	
-	  		return <li {...listItemProps}>{topic.label}</li>
+	  		return <div {...listItemProps}>{topic.label}</div>
 	  	});
 	    
 	  	let metaDataProps = {
@@ -31,11 +32,11 @@ var TagCloud = React.createClass({
 	  	let meta = (selectedTopic === -1) ? null : <MetaData {...metaDataProps}/>
 
 	    return (
-	    	<div>
-	    		<ul className="bw-tag">
+	    	<div className="bw-container">
+	    		<div className="bw-tag">
 	        		{topicsNodes}
-	      		</ul>
-	      		{meta}
+	      		</div>
+     			{meta}
 	      	</div>
 	    );
   	}

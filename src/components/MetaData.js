@@ -7,7 +7,7 @@ let MetaData = React.createClass({
 	  	let topic = this.props.topic || {};
 	  		    
 	    return (
-	    	<div>
+	    	<div className="bw-meta-container">
 	        	<h3>Information on topic "{topic.label}"</h3>
 	        	<ul>
 	        		<li>Total mentions: {topic.volume || 0}</li>
