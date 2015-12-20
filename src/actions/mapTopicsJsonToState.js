@@ -12,7 +12,7 @@ export default function mapTopicsJsonToState (topics) {
 }
 
 function createMapToState (range) {
-	return function (topic) {	
+	return function (topic) {
 
 		let topicClass = [
 			setSentimentClass(topic.sentimentScore),
@@ -27,12 +27,8 @@ function createMapToState (range) {
 			sentimentNeutral: topic.sentiment.neutral,
 			sentimentNegative: topic.sentiment.negative,
 			sentimentScore: topic.sentimentScore,
-			className: topicClass,
-			position: {
-				x: '',
-				y: ''
-			}
-		};		
+			className: topicClass
+		};
 	}
 }
 

@@ -9,7 +9,6 @@ test('topic_size: expect the result to contain the index size of the element', f
     	max: 45
     }
 
-
     let topicSizeString = topicSize(33, range);
     t.notEqual(topicSizeString.indexOf('3'), -1);
     t.notEqual(topicSize(44, range).indexOf('5'), -1);
