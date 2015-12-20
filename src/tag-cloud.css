@@ -3,23 +3,23 @@ body {
 	font-family: 'Oxygen', sans-serif;
 }
 
-.bw-container {
-	display: flex;
-	flex: 0 300px;
+h1 {
+	font-size: 4rem;
 }
 
-.bw-tag {	
-	font-size: 1.2em;	
+.bw-tag {
+	font-size: 1.2em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	cursor: pointer;
+	margin-right: 2rem;
 }
 
 .bw-tag-topic {
-	display: inline;
-	padding: 15px;
+	display: inline-block;
+	padding: 1.5rem 2rem;
 }
 
 .bw-tag-size-0 {
@@ -53,6 +53,23 @@ body {
 	text-decoration: underline;
 }
 
+
 .bw-meta-container {
 	flex: 0 0 20rem;
+}
+
+.bw-meta-list {
+	list-style: none;
+	padding: 0;
+}
+
+.bw-meta-total {
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+	.bw-container {
+		display: flex;
+		flex: 0 300px;
+	}
 }
