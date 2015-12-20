@@ -4,11 +4,11 @@
   "description": "Technical test challenge",
   "main": "index.js",
   "scripts": {
-    "test": "node *.test.js"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "bw_challenge"
+    "url": "https://github.com/adsanderson/BW_Challenge"
   },
   "author": "Adam Sanderson",
   "devDependencies": {
@@ -22,17 +22,12 @@
     "gulp-babel": "^6.1.1",
     "gulp-tape": "0.0.7",
     "json-loader": "^0.5.4",
-    "karma": "^0.13.15",
-    "karma-chrome-launcher": "^0.2.2",
-    "karma-tap": "^1.0.3",
-    "karma-webpack": "^1.7.0",
     "style-loader": "^0.13.0",
     "tape": "^4.2.2",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "babel-preset-react": "^6.3.13",
     "es6-object-assign": "^1.0.1",
     "es6-promise": "^3.0.2",
     "isomorphic-fetch": "^2.2.0",
