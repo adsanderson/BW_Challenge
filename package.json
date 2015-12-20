@@ -21,6 +21,7 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
     "gulp-tape": "0.0.7",
+    "gulp-util": "^3.0.7",
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.0",
     "tape": "^4.2.2",
