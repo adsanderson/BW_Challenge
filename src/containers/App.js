@@ -6,7 +6,7 @@ import * as topicActions from '../actions';
 function mapStateToProps(state) {	
   	return {
     	selectedTopic: state.selectedTopic,
-		topics: state.topics
+		    topics: state.topics
   	};
 }
 

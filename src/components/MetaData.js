@@ -4,9 +4,9 @@ import React from 'react';
 
 let MetaData = React.createClass({
   	render() {
-	  	let topic = this.props.topic || {};
+	  	    let topic = this.props.topic || {};
 
-	    return (
+	        return (
 	    	<div className="bw-meta-container">
 	        	<h3>Information on topic "{topic.label}"</h3>
 	        	<ul className="bw-meta-list">

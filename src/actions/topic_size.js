@@ -2,14 +2,14 @@
 
 export default function topicSize (topicVolume, range) {
 
-	const numberOfSizes = 6;
-	const offsetMaxRange = 1;
+	  const numberOfSizes = 6;
+	  const offsetMaxRange = 1;
 
-	const rangeSize = (range.max - range.min + offsetMaxRange) / numberOfSizes;
+	  const rangeSize = (range.max - range.min + offsetMaxRange) / numberOfSizes;
 
-	const className = 'bw-tag-size-';
+	  const className = 'bw-tag-size-';
 
-	let sizePosition = (topicVolume - range.min) / rangeSize;
+	  let sizePosition = (topicVolume - range.min) / rangeSize;
 
-	return className + Math.floor(sizePosition);
+	  return className + Math.floor(sizePosition);
 }

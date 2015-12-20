@@ -6,15 +6,15 @@ export const RECEIVE_TOPICS = 'RECEIVE_TOPICS';
 export const SELECT_TOPIC = 'SELECT_TOPIC';
 
 export function selectTopic (index) {
-	return {
-		type: SELECT_TOPIC,
-		index
+	  return {
+		  type: SELECT_TOPIC,
+		  index
 	};
 }
 
 export function requestTopics () {
-	return {
-		type: REQUEST_TOPICS
+	  return {
+		  type: REQUEST_TOPICS
 	};
 }
 
@@ -28,8 +28,8 @@ export function fetchTopics() {
 }
 
 export function receiveTopics (json) {
-	return {
-		type: RECEIVE_TOPICS,
-		topics: mapTopicsJsonToState(json.topics)
+	  return {
+		  type: RECEIVE_TOPICS,
+		  topics: mapTopicsJsonToState(json.topics)
 	};
 }
