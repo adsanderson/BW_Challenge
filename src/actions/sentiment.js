@@ -5,10 +5,10 @@ export default function setSentimentClass (sentiment) {
 		const positiveSentiment = 60;
 		const negativeSentiment = 40;
 		if (sentiment >= positiveSentiment) {
-			return 'bw-tag-positive';
+			return 'bw-positive';
 		}
 		if (sentiment <= negativeSentiment) {
-			return 'bw-tag-negative';
+			return 'bw-negative';
 		}		
 	}
 	return '';

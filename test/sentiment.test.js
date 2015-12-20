@@ -15,7 +15,7 @@ test('expect an empty string to be returned for neutral values', function (t) {
 test('expect the positive class string to be returned for positive values', function (t) {
     t.plan(3);
 
-    let positiveClassString = 'bw-tag-positive';
+    let positiveClassString = 'bw-positive';
 
     let positives = [
     	sentiment(60),
@@ -30,7 +30,7 @@ test('expect the positive class string to be returned for positive values', func
 test('expect the negative class string to be returned for negative values', function (t) {
     t.plan(3);
 
-    let negativeClassString = 'bw-tag-negative';
+    let negativeClassString = 'bw-negative';
 
     let negatives = [
     	sentiment(40),
