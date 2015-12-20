@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/adsanderson/BW_Challenge.svg?branch=master)](https://travis-ci.org/adsanderson/BW_Challenge)
 
+[Live example](http://bw-challenge.adamsanderson.co.uk.s3-website-eu-west-1.amazonaws.com/)
+
 ## Technologies used
 
 - React + Redux
