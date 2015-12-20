@@ -1,7 +1,7 @@
 import topicSize from '../src/actions/topic_size';
 import test from 'tape';
 
-test('expect the result to contain the index size of the element', function (t) {
+test('topic_size: expect the result to contain the index size of the element', function (t) {
     t.plan(5);
 
     let range = {
@@ -11,7 +11,7 @@ test('expect the result to contain the index size of the element', function (t) 
 
 
     let topicSizeString = topicSize(33, range);
-    t.notEqual(topicSizeString.indexOf('4'), -1);
+    t.notEqual(topicSizeString.indexOf('3'), -1);
     t.notEqual(topicSize(44, range).indexOf('5'), -1);
     t.notEqual(topicSize(45, range).indexOf('5'), -1);
     t.notEqual(topicSize(10, range).indexOf('0'), -1);
