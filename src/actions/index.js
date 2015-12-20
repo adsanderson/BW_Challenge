@@ -15,21 +15,21 @@ export function selectTopic (index) {
 export function requestTopics () {
 	return {
 		type: REQUEST_TOPICS
-	}
+	};
 }
 
 export function fetchTopics() {
   return (dispatch) => {
-    dispatch(requestTopics())
+    dispatch(requestTopics());
     return fetch('topics.json')
       .then((response) => response.json())
-      .then((json) => dispatch(receiveTopics(json)))
-  }
+      .then((json) => dispatch(receiveTopics(json)));
+  };
 }
 
 export function receiveTopics (json) {
 	return {
 		type: RECEIVE_TOPICS,
 		topics: mapTopicsJsonToState(json.topics)
-	}
+	};
 }

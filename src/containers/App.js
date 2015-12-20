@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import TagCloud from '../components/TagCloud'
+import TagCloud from '../components/TagCloud';
 import * as topicActions from '../actions';
 
 function mapStateToProps(state) {	

@@ -19,8 +19,6 @@
     "babel-preset-stage-2": "^6.3.13",
     "css-loader": "^0.23.0",
     "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.1",
-    "gulp-tape": "0.0.7",
     "gulp-util": "^3.0.7",
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.0",
@@ -36,7 +34,6 @@
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.1",
     "redux": "^3.0.5",
-    "redux-logger": "^2.3.1",
     "redux-thunk": "^1.0.2"
   }
 }

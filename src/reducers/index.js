@@ -1,6 +1,6 @@
 'use strict';
 
-import { REQUEST_TOPICS, RECEIVE_TOPICS, SELECT_TOPIC } from '../actions'
+import { REQUEST_TOPICS, RECEIVE_TOPICS, SELECT_TOPIC } from '../actions';
 import { combineReducers } from 'redux';
 // import tagCloud from './tag-cloud';
 
@@ -20,7 +20,7 @@ function topics(state = initialState, action) {
         	topics: action.topics
       	});
     default:
-      return state
+      return state;
   }
 
 };

@@ -1,0 +1,10 @@
+{
+	"parser": "babel-eslint",
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "rules": {
+    	"semi": [2, "always"],
+    	"indent": [2, 2]
+    }
+}

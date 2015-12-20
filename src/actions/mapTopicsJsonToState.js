@@ -2,7 +2,7 @@
 
 import reduceToMinAndMaxValue from './reduceToMinAndMaxValue';
 import setSentimentClass from './sentiment';
-import setTopicSizeClass from './topic_size'
+import setTopicSizeClass from './topic_size';
 
 export default function mapTopicsJsonToState (topics) {
 	let initialRangeValue = topics[0].volume;
@@ -29,7 +29,7 @@ function createMapToState (range) {
 			sentimentScore: topic.sentimentScore,
 			className: topicClass
 		};
-	}
+	};
 }
 
 function shuffleArray(array) {
